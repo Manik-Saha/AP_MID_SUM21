@@ -26,7 +26,7 @@ namespace LabPerformance01.Controllers
                 bool b = db.Admins.CheckAdmin(m);
                 if (b)
                 {
-                    return RedirectToAction("Index");
+                    return RedirectToAction("Index", "Admin");
                 }
                 else
                 {

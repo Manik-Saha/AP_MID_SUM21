@@ -20,17 +20,20 @@ namespace LabPerformance01.Controllers
         [HttpPost]
         public ActionResult Index(Admin m)
         {
-            Database db = new Database();
-            bool b = db.Admins.CheckAdmin(m);
-            if (b)
+            if (ModelState.IsValid)
             {
-                return RedirectToAction("Index");
+                Database db = new Database();
+                bool b = db.Admins.CheckAdmin(m);
+                if (b)
+                {
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    ViewBag.Error = "Your username & password does not match";
+                }
             }
-            else
-            {
-                ViewBag.Error = "Your username & password does not match";
-                return View();
-            }
+            return View();
         }
     }
 }

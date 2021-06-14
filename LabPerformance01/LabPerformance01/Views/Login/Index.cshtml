@@ -1,0 +1,17 @@
+﻿@model LabPerformance01.Models.Admin
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Login Page</h2>
+<div>
+    <form action="/Login/Index" class="center-block" method="post">
+        <p class="text-danger">@ViewBag.Error</p>
+        <input type="text" name="Username" placeholder="Username" value="" /><br />
+        @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+        <br /><input type="text" name="Password" placeholder="Password" value="" /><br />
+        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+        <br /><input class="btn btn-group" type="submit" name="submit" value="Login" />
+    </form>
+</div>
+

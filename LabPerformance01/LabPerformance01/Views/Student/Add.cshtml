@@ -1,0 +1,26 @@
+﻿@model LabPerformance01.Models.Student
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Add Student</h2>
+<div>
+    <form action="/Student/Add" class="center-block" method="post">
+        <input class="form-control" type="text" name="Name" value="" placeholder="Name" />
+        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+        <input class="form-control" type="date" name="DOB" value="" />
+        @Html.ValidationMessageFor(model => model.DOB, "", new { @class = "text-danger" })
+        <input class="form-control" type="text" name="Credit" value="" placeholder="Credit" />
+        @Html.ValidationMessageFor(model => model.Credit, "", new { @class = "text-danger" })
+        <input class="form-control" type="text" name="CGPA" value="" placeholder="CGPA" />
+        @Html.ValidationMessageFor(model => model.CGPA, "", new { @class = "text-danger" })
+        <select class="form-control" name="Dept_ID" id="Dept_ID">
+            <option value="">Please select your Department Here</option>
+            <option value="1">EEE</option>
+            <option value="2">CSE</option>
+            <option value="3">BBA</option>
+            <option value="4">English</option>
+        </select>
+        <input class="btn btn-default" type="submit" name="submit" value="Add" />
+    </form>
+</div>

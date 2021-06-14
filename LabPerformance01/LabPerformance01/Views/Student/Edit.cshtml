@@ -1,0 +1,22 @@
+﻿@model LabPerformance01.Models.Student
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+<div>
+    <form action="" method="post">
+        <input type="hidden" name="ID" value="@Model.ID" />
+        <input class="form-control" type="text" name="Name" value="@Model.Name" placeholder="Name" />
+        <input class="form-control" type="date" name="DOB" value="@Model.DOB" />
+        <input class="form-control" type="text" name="Credit" value="@Model.Credit" placeholder="Credit" />
+        <input class="form-control" type="text" name="CGPA" value="@Model.CGPA" placeholder="CGPA" />
+        <select class="form-control" name="Dept_ID" id="Dept_ID">
+            <option value="1">EEE</option>
+            <option value="2">CSE</option>
+            <option value="3">BBA</option>
+            <option value="4">English</option>
+        </select>
+        <input class="btn-block" type="submit" name="submit" value="Save" />
+    </form>
+</div>

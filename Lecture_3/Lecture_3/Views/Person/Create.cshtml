@@ -1,0 +1,13 @@
+﻿@model Lecture_3.Models.Person
+@{
+    //ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+<form action="/Person/CreateView" method="post">
+    <input class="form-control" type="text" name="Name" value="" />
+    <input class="form-control" type="date" name="DOB" value="" />
+    <input class="form-control" type="text" name="Address" value="" />
+    <input class="btn btn-danger" type="submit" name="submit" value="Submit" />
+</form>
+

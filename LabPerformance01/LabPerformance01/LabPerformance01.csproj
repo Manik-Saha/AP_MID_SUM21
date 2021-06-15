@@ -129,6 +129,7 @@
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Database\Admins.cs" />
     <Compile Include="Models\Database\Database.cs" />
+    <Compile Include="Models\Database\Departments.cs" />
     <Compile Include="Models\Database\Students.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\Student.cs" />

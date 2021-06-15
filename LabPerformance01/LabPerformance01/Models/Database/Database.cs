@@ -10,7 +10,7 @@ namespace LabPerformance01.Models.Database
     {
         public Students Students { get; set; }
         public Admins Admins { get; set; }
-        public Department Department { get; set; }
+        public Departments Departments { get; set; }
         public Database()
         {
             string conString = @"Data Source=LAPTOP-DK7TKAJO\SQLEXPRESS;Initial Catalog=LabPerformance01;Integrated Security=True";
@@ -18,6 +18,7 @@ namespace LabPerformance01.Models.Database
 
             Students = new Students(conn);
             Admins = new Admins(conn);
+            Departments = new Departments(conn);
         }
     }
 }

@@ -14,6 +14,7 @@ namespace LabPerformance01.Controllers
         public ActionResult Add()
         {
             Student s = new Student();
+            //Department d = new Department();
             return View(s);
         }
 

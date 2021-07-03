@@ -8,10 +8,11 @@
     <table class="table table-bordered">
         <tr>
             <th>ID</th>
-            <th>Name</th>
-            <th>DOB</th>
+            <th>Student Name</th>
+            <th>Date Of birth</th>
             <th>Credit</th>
             <th>CGPA</th>
+            <th>Department name</th>
             <th></th>
             <th></th>
         </tr>
@@ -23,6 +24,7 @@
                 <td>@students.DOB</td>
                 <td>@students.Credit</td>
                 <td>@students.CGPA</td>
+                <td>@students.Dept_ID</td>
                 <td><a class="btn btn-success" href="/Student/Edit/@students.ID">Edit</a></td>
                 <td><a class="btn btn-danger" href="/Student/Delete/@students.ID">Delete</a></td>
             </tr>

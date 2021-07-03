@@ -31,7 +31,7 @@ namespace LabPerformance01.Models.Database
         public List<Student> GetAll()
         {
             List<Student> students = new List<Student>();
-            string query = "select * from Students";
+            string query = "select s.*,d.Dept_name from Students s, Department d where s.Dept_ID = d.Dept_ID";
             SqlCommand cmd = new SqlCommand(query, conn);
             conn.Open();
             SqlDataReader reader = cmd.ExecuteReader();
@@ -44,6 +44,7 @@ namespace LabPerformance01.Models.Database
                     DOB = reader.GetDateTime(reader.GetOrdinal("DOB")),
                     Credit = reader.GetInt32(reader.GetOrdinal("Credit")),
                     CGPA = reader.GetDouble(reader.GetOrdinal("CGPA")),
+                    Dept_ID = reader.GetInt32(reader.GetOrdinal("Dept_ID")),
                 };
                 students.Add(s);
             }

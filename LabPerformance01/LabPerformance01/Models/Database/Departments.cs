@@ -13,5 +13,25 @@ namespace LabPerformance01.Models.Database
         {
             this.conn = conn;
         }
+
+        public List<Department> GetAll()
+        {
+            List<Department> departments = new List<Department>();
+            string query = "select * from Department";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            conn.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                Department d = new Department()
+                {
+                    Dept_ID = reader.GetInt32(reader.GetOrdinal("Dept_ID")),
+                    Dept_Name = reader.GetString(reader.GetOrdinal("Dept_Name")),
+                };
+                departments.Add(d);
+            }
+            conn.Close();
+            return departments;
+        }
     }
 }

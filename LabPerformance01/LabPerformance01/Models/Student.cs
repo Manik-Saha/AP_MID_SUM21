@@ -17,5 +17,6 @@ namespace LabPerformance01.Models
         public DateTime DOB { get; set; }
         [Required]
         public double CGPA { get; set; }
+        public int Dept_ID { get; set; }
     }
 }

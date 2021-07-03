@@ -2,6 +2,7 @@
 using LabPerformance01.Models.Database;
 using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -14,9 +15,14 @@ namespace LabPerformance01.Controllers
         public ActionResult Add()
         {
             Student s = new Student();
-            //Department d = new Department();
-            return View(s);
+            Database db = new Database();
+            dynamic comboData = new ExpandoObject();
+            comboData.Student = s;
+            comboData.Department = db.Departments.GetAll();
+            return View(comboData);
+
         }
+
 
         [HttpPost]
         public ActionResult Add(Student s)

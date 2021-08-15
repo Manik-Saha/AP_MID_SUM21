@@ -1,0 +1,6 @@
+D:\ATP-2 ( .NET )\Inventory_Manage_System_(Backend)\BEL\bin\Debug\BEL.dll
+D:\ATP-2 ( .NET )\Inventory_Manage_System_(Backend)\BEL\bin\Debug\BEL.pdb
+D:\ATP-2 ( .NET )\Inventory_Manage_System_(Backend)\BEL\obj\Debug\BEL.csprojAssemblyReference.cache
+D:\ATP-2 ( .NET )\Inventory_Manage_System_(Backend)\BEL\obj\Debug\BEL.csproj.CoreCompileInputs.cache
+D:\ATP-2 ( .NET )\Inventory_Manage_System_(Backend)\BEL\obj\Debug\BEL.dll
+D:\ATP-2 ( .NET )\Inventory_Manage_System_(Backend)\BEL\obj\Debug\BEL.pdb

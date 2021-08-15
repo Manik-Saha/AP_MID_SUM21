@@ -7,8 +7,13 @@ namespace CodeFirstEF.Models
 {
     public class Status
     {
+        public Status()
+        {
+            Orders = new HashSet<Order>();
+        }
         public int Id { get; set; }
-        public int OrderId { get; set; }
-        public int CategoryId { get; set; }
+        public string Name { get; set; }
+
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

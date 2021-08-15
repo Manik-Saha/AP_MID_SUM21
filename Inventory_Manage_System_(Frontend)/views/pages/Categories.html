@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>All categories</title>
+</head>
+
+<body>
+    <div>
+        <h1>Category List</h1>
+        <table>
+            <tr>
+                <th>Category ID</th>
+                <th>Category Name</th>
+            </tr>
+            <tr ng-repeat="c in Categories">
+                <td>{{c.Id}}</td>
+                <td>{{c.Name}}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
